@@ -1,0 +1,10 @@
+ 
+ 
+<% event = local_assigns.has_key?(:event) ? event : nil%>
+	<% if event %>
+	<% event.comments.each do |c| %> 
+	  <p>
+	    <%= c.content %>
+	  </p>
+	<% end %>
+<% end %>

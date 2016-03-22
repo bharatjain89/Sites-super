@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<h4>comments</h4>
+
+<div id="comment">
+	<%= render :partial => "articles/show_comments", :locals => {:article => @article} %> 
+</div>
+
+<h2>new comment</h2>
+<%= render 'comments/form' %>
+
+
+ 

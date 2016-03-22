@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+ 
+<p>
+  <strong>Title:</strong>
+  <%= @event.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @event.description %>
+</p>
+
+<h4>comments</h4>
+
+ <div id="comm">
+ 	<%= render :partial => "events/show_comments", :locals => {:event => @event} %>
+ </div>
+
+<h2>new comment</h2>
+<%= render 'comments/form' %>

@@ -1,0 +1,10 @@
+ 
+ 
+<% article = local_assigns.has_key?(:article) ? article : nil%>
+	<% if article %>
+	<% article.comments.each do |c| %> 
+	  <p>
+	    <%= c.content %>
+	  </p>
+	<% end %>
+<% end %>

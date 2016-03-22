@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+  
+<h1>Listing Articles</h1>
+
+<%= form_tag @article,:remote => true,  :method => 'get' do %>
+  <%= text_field_tag :search_article, params[:query] %>
+  <%= submit_tag "Search", :name => nil %>  
+<% end %>
+
+<div id= "search">
+  <%= render :partial => "articles/search", :locals => {:article => @articles}  %>
+</div>
+
+<%= link_to 'New Article', new_article_path %>
